@@ -13,7 +13,7 @@ t = time()
          
 p = euler.primes(15000000)
 nums = p[1:235]
-print "p done"
+print("p done")
 
 m = {}
 def chk(a, b):
@@ -29,14 +29,14 @@ def solve():
             if chk(a,b):
                 for c in nums[nums.index(b)+1:]:
                     if chk(a,c) and chk(b,c):
-                        print a,b,c
+                        print(a,b,c)
                         for d in nums[nums.index(c)+1:]:
                             if chk(a,d) and chk(b,d) and chk(c,d):
                                 for e in nums[nums.index(d)+1:]:
-                                    print a,b,c,d,e
+                                    print(a,b,c,d,e)
                                     if chk(a,e) and chk(b,e) and chk(c,e) and chk(d,e):
                                         return a,b,c,d,e
 
 
-print solve()
-print time() - t
+print(solve())
+print(time() - t)

@@ -48,7 +48,7 @@ def euler_sieve(n):
 
 def primes(n):
     # t=clock()
-    s = range(0, n + 1)
+    s = list(range(0, n + 1))
     s[1] = 0
     bottom = 2
     top = n // bottom
